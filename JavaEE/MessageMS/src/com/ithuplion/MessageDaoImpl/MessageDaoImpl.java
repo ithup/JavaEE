@@ -79,11 +79,15 @@ public class MessageDaoImpl implements MessageDao{
 	@Override
 	public boolean deleteMessage(int id) {
 		boolean f=false;
-		for(int i=0;i<all.length;i++){
+		/*for(int i=0;i<all.length;i++){
 			if(all[i].getId() == id){
 				all[i]=null;
 				f=true;
 			}
+		}*/
+		Message message = this.findById(id);
+		if(message!=null){
+//			message.
 		}
 		return f;
 	}
